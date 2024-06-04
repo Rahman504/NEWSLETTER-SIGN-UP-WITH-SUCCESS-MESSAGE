@@ -1,0 +1,128 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Roboto", sans-serif;
+}
+body {
+    background-color: hsl(235, 18%, 26%);
+}
+div {
+    display: flex;
+    align-items: center;
+}
+section.whole {
+    background-image: url(assets/images/illustration-sign-up-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 37%;
+    background-position-x: 97%;
+    background-position-y: center;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    width: 65%;
+    max-width: 900px;
+    background-color: hsl(0, 0%, 100%);
+    padding: 50px 0px;
+    border-radius: 30px;
+}
+section.whole section.text {
+    max-width: 370px;
+    margin-left: 60px;
+    
+}
+section.whole section.text h1, section.whole section.text p {
+    color: hsl(234, 29%, 20%);
+}
+section.whole section.text h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+section.whole section.text p {
+    font-weight: 400;
+    font-size: 1rem;
+}
+section.whole section.text > p {
+    margin: 20px 0px;
+}
+ section.whole section.text div {
+    margin-top: 13px;
+}
+section.whole section.text div > p {
+    margin-left: 15px;
+}
+section.whole section.text article {
+    margin-top: 30px;
+    width: 100%;
+} 
+section.whole section.text article article {
+    display: flex;
+    justify-content: space-between;
+}
+section.whole section.text article article p {
+    font-size: .8rem;
+    font-weight: 700;
+} 
+#error {
+    color: hsl(4, 100%, 67%);
+}
+section.whole section.text article input {
+    margin-top: 5px;
+    border: 1px solid hsl(231, 7%, 60%);
+    padding: 13px 0px 13px 20px;
+    width: 100%;
+    border-radius: 7px;
+    box-sizing: border-box;
+    text-align: left;
+    color: hsl(234, 29%, 20%);
+    font-weight: 400;
+    font-size: .9rem;
+    cursor: pointer;
+}
+section.whole section.text article input::placeholder {
+    color: hsl(231, 7%, 60%);
+}
+section.whole section.text article input:focus {
+    outline: none;
+}
+section.whole section.text article button {
+    padding: 13px 0px;
+    width: 100%;
+    border-radius: 7px;
+    border-color: transparent;
+    background-color: hsl(234, 29%, 20%);
+    color: #fff;
+    cursor: pointer;
+    margin-top: 15px;
+}
+section.whole section.text article button:hover {
+    background-color: hsl(4, 100%, 67%);
+}
+@media screen and (max-width: 850px) {
+    body {
+        background-color: #fff;
+        background-image: url(assets/images/illustration-sign-up-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    section.whole {
+        background-color: unset;
+        background-image: unset;
+        width: 85%;
+        max-width: unset;
+        padding: unset;
+        position: unset;
+        transform: unset;
+        margin: auto;
+        margin-top: 450px;
+        margin-bottom: 50px;
+    }
+    section.whole section.text {
+        margin-left: unset;
+        margin: auto;
+    }
+    section.whole section.text h1 {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+}

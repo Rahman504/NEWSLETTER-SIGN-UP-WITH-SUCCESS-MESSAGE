@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <!-- Sign-up form start -->
+  <section class="whole">
+    <section class="text">
+        <h1>Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly<br> updates on:</p>
+        <div>
+          <img src="assets/images/icon-list.svg" alt="icon-list"/>
+          <p>Product discovery and building what matters</p>
+        </div>
+        <div>
+          <img src="assets/images/icon-list.svg" alt="icon-list"/>
+          <p>Measuring to ensure updates are a success</p>
+        </div>
+        <div>
+          <img src="assets/images/icon-list.svg" alt="icon-list"/>
+          <p>And much more!</p>
+        </div>
+        <article>
+          <article>
+            <p>Email address</p>
+            <p id="error"></p>
+          </article>
+          
+          <input type="email" name="email" placeholder="email@company.com"><br>
+          <button>Subscribe to monthly newsletter</button>
+        </article>
+        
+    </section>
+  </section>
+
+  
+
+  <!-- Sign-up form end -->
+
+  <!-- Success message start 
+
+  Thanks for subscribing!
+
+  A confirmation email has been sent to ash@loremcompany.com. 
+  Please open it and click the button inside to confirm your subscription.
+
+  Dismiss message
+
+   Success message end -->
+  </div>
+  <script>
+        const input = document.querySelector("input")
+        const submitted = document.querySelector("button")
+        const error = document.getElementById("error")
+        submitted.addEventListener("click", function() {
+          var enteredEmail = input.value.trim();
+          if (isValidEmail(enteredEmail)) {
+            sessionStorage.setItem("submit", enteredEmail); 
+            window.location.href = "submission.html"
+          } else {
+            error.innerText = "Valid email required";
+            input.style.borderColor = "hsl(4, 100%, 67%)";
+            input.style.color = "hsl(4, 100%, 67%)"
+            input.style.backgroundColor = "hsl(2, 50%, 90%)"
+          }
+        })
+        function isValidEmail(email) {
+          var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return emailRegex.test(email);
+
+        }
+        
+
+       
+
+    </script>
+</body>
+</html>
